@@ -12,7 +12,7 @@ project 1 - A Random Quote Generator
 ***/
 var quotes =[{
   quote:'Just keep swimming',
-  soure:'-Finding Nemo',
+  source:'-Finding Nemo',
   citation:'-dory',
   year:'2003'
 
@@ -23,22 +23,22 @@ var quotes =[{
 
 },{
   quote:'You know you’re in love when you can’t fall asleep because reality is finally better than your dreams',
-  soure:'- Dr. Suess'
+  source:'- Dr. Suess'
   
 },{
   quote:'E.T. phone home.',
-  soure:' - E.T. The Extra-Terrestrial',
+  source:' - E.T. The Extra-Terrestrial',
   citation:'E.T.'
 
 },{
   quote:'Why so serious?',
-  soure:' - The Dark Knight',
+  source:' - The Dark Knight',
   citation:'-the joker',
   year:'2008'
 
 },{
   quote:'May the Force be with you.',
-  soure:'-Star Wars',
+  source:'-Star Wars',
   citation:'han solo',
   year:'1977'
 }];
@@ -47,19 +47,19 @@ var quotes =[{
 /***
  * `getRandomQuote` function
 ***/
-function getRandomQuote( array ) {
+function getRandomQuote() {
   var randomNum = Math.floor( Math.random() * quotes.length);
   var randomQuote = quotes[randomNum]; 
   
-  return array;
+  return getRandomQuote;
 }
 
 
 /***
  * `printQuote` function
 ***/
-function printQuote(innerHTML) {
-  var randomQuote = getRandomQuote( quotes );
+function printQuote() {
+  var randomQuote = getRandomQuote();
 
   var htmlString = `<p class = "quotes">${randomQuote.quote}</p>`;
       htmlString += `<p class = "source">${randomQuote.soure}`;
@@ -74,7 +74,7 @@ function printQuote(innerHTML) {
       htmlString += `</p>`;
   
 
- document.getElementById('qute-box').innerHTML = htmlString
+ document.getElementById('quote-box').innerHTML = htmlString
 
 };
 
