@@ -52,17 +52,17 @@ function getRandomQuote() {
 
 //**this printQuote function will call the getRandomQuote and then add  it to the page
 function printQuote() {
-  var randomQuote = getRandomQuote();
+  var randomString = getRandomQuote();
 
-  var htmlString = `<p class = "quotes">${randomQuote.quote}</p>`;
-      htmlString += `<p class = "source">${randomQuote.soure}`;
+  var htmlString = `<p class = "quotes">${randomString.quote}</p>`;
+      htmlString += `<p class = "source">${randomString.source}`;
 
-  if ( randomQuote.citation ) {
-    htmlString += `<span class="citation">${randomQuote.citation}</span>`;
+  if ( randomString.citation ) {
+    htmlString += `<span class="citation">${randomString.citation}</span>`;
   };
 //if statment to see if there are any citation or year 
-  if ( randomQuote.year ) {
-    htmlString += `<span class="year">${randomQuote.year}</span>`;
+  if ( randomString.year ) {
+    htmlString += `<span class="year">${randomString.year}</span>`;
   };
       htmlString += `</p>`;
   
