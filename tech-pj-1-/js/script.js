@@ -6,10 +6,7 @@ project 1 - A Random Quote Generator
 // For assistance: 
   // Check the "Project Resources" section of the project instructions
   // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
-
-/*** 
- * `quotes` array 
-***/
+//***an array of objects that are not all the same
 var quotes =[{
   quote:'Just keep swimming',
   source:'-Finding Nemo',
@@ -44,9 +41,7 @@ var quotes =[{
 }];
 
 
-/***
- * `getRandomQuote` function
-***/
+//**this getRandomQuote function will make a random number and add it to one object in the array 
 function getRandomQuote() {
   var randomNum = Math.floor( Math.random() * quotes.length);
   var randomQuote = quotes[randomNum]; 
@@ -55,9 +50,7 @@ function getRandomQuote() {
 }
 
 
-/***
- * `printQuote` function
-***/
+//**this printQuote function will call the getRandomQuote and then add  it to the page
 function printQuote() {
   var randomQuote = getRandomQuote();
 
@@ -67,7 +60,7 @@ function printQuote() {
   if ( randomQuote.citation ) {
     htmlString += `<span class="citation">${randomQuote.citation}</span>`;
   };
-
+//if statment to see if there are any citation or year 
   if ( randomQuote.year ) {
     htmlString += `<span class="year">${randomQuote.year}</span>`;
   };
